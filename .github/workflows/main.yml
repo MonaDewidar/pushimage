@@ -20,7 +20,7 @@ jobs:
       - name: "docker login"
         run: docker login --username ${{secrets.USERNAME}} --password ${{secrets.PASSWORD}}
 
-      - name: "docker build image"
+      - name: "docker build icmage"
         run: docker build -t ${{secrets.USERNAME}}/img .
 
       - name: "docker push"
