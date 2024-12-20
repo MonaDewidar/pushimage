@@ -18,11 +18,11 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: "docker login"
-        run: docker login --username ${{ secrets.USERNAME}} --password ${{secrets.PASSWORD}}
+        run: docker login --username ${{secrets.USERNAME}} --password ${{secrets.PASSWORD}}
 
       - name: "docker build image"
-        run: docker build -t ${{ secrets.USERNAME}}/img .
+        run: docker build -t ${{secrets.USERNAME}}/img .
 
       - name: "docker push"
-        run: docker push ${{ secrets.USERNAME}}/img
+        run: docker push ${{secrets.USERNAME}}/img
       
