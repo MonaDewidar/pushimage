@@ -21,7 +21,7 @@ jobs:
         run: docker login --username ${{ secrets.USERNAME}} --password ${{secrets.PASSWORD}}
 
       - name: "docker build image"
-        run: docker build -t ${{ secrets.USERNAME}}/monaaa .
+        run: docker build -t ${{ secrets.USERNAME}}/img .
 
       - name: "docker push"
         run: docker push ${{ secrets.USERNAME }}/img
